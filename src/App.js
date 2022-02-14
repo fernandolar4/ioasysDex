@@ -1,16 +1,10 @@
-
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "./routes";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          POKEMON
-
-        </p>
-      
-       
-      </header>
-    </div>
+    <Router>
+      <Routes />
+    </Router>
   );
 }
 
