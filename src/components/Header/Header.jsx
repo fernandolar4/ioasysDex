@@ -9,7 +9,6 @@ const Header = () => (
         <img src={Logo} alt="ioasys" />
         <h1>ioasys pokédex</h1>
       </div>
-
       <button type="switch">A</button>
     </S.Title>
   </>
