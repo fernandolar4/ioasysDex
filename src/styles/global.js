@@ -6,6 +6,8 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    background-color: ${({ theme }) => theme.colors.Background}
+
     }
     button {
         border:none;
@@ -14,7 +16,6 @@ export default createGlobalStyle`
     body {
         width: 100%;
         height: 100vh;
-        colors: ${({ theme }) => theme.colors.Background}
     }
     
     `;
