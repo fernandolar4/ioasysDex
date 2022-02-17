@@ -6,7 +6,6 @@ export const GoBack = styled.div`
     color: ${({ theme }) => theme.colors.MediumGray};
     display: flex;
     align-items: center;
-    text-align: center;
     img {
       margin-right: 12px;
       height: 18px;
