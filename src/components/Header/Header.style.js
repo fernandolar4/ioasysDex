@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const ColorContainer = styled.div`
   display: block;
   background-color: ${({ theme }) => theme.colors.Ioasys};
   height: 15px;
@@ -33,5 +33,8 @@ export const Title = styled.header`
     border-radius: 40px;
     background: transparent;
     border: 1px solid ${({ theme }) => theme.colors.Ioasys};
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;

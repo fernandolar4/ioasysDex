@@ -24,12 +24,11 @@ const theme = {
     LightGray: "#E0E0E0",
     White: "#FFFFFF",
 
-    Text: "#212121",
-    Background: "#F7F7F7",
+    Text: "#F7F7F7",
+    Background: "#212121",
 
     Ioasys: "#EC0344",
   },
-  
 };
 
 export default theme;

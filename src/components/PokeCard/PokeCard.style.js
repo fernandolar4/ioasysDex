@@ -50,10 +50,10 @@ export const Card = styled.div`
 
     p {
       background: transparent;
-      color: ${({ theme }) => theme.colors.White};
       align-self: center;
       padding: 0px 5px 5px 5px;
       font-size: 13px;
+      color: ${({ theme }) => theme.colors.White};
     }
   }
 `;
