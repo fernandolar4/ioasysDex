@@ -29,7 +29,6 @@ const theme = {
 
     Ioasys: "#EC0344",
   },
-  
 };
 
 export default theme;
