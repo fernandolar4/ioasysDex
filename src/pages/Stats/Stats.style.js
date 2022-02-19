@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Pokeball from "../../assets/icons/Pokeball.svg";
 
 export const Body = styled.body`
   display: flex;
@@ -7,8 +8,10 @@ export const Body = styled.body`
 `;
 
 export const PokeFoto = styled.div`
-  background: url("../../assets/icons/Pokeball.svg"),
-    ${({ theme }) => theme.colors.Grass};
+  background-image: url(${Pokeball});
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: ${({ theme }) => theme.colors.Grass};
   width: 33%;
   height: 100%;
   padding: 17px 27px;
