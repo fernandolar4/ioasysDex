@@ -1,17 +1,13 @@
 import * as S from "./Header.style";
 import Logo from "../../assets/icons/ioasys.svg";
-import RedBall from "../../assets/icons/RedBall.svg";
-import GreyBall from "../../assets/icons/GreyBall.svg";
-import React, { useState } from "react";
+import { ThemeContext } from "styled-components";
+import React, { useContext } from "react";
+import Switch from "react-switch";
+import { TemaContext } from "../../TemaContext";
 
 const Header = () => {
-  const [theme, setTheme] = useState("light");
-
-  const isDarkTheme = theme === "dark";
-  const toggleTheme = () => {
-    setTheme(isDarkTheme ? "light" : "dark");
-    // localStorage.setItem("theme", theme);
-  };
+  const { colors, title } = useContext(ThemeContext);
+  const  toggleTheme  = useContext(TemaContext);
   return (
     <>
       <S.ColorContainer />
@@ -20,13 +16,17 @@ const Header = () => {
           <img src={Logo} alt="ioasys" />
           <h1>ioasys pokédex</h1>
         </div>
-        <button type="switch" onClick={toggleTheme}>
-          {isDarkTheme ? (
-            <img src={GreyBall} alt="Mudar Tema" />
-          ) : (
-            <img src={RedBall} alt="Mudar Tema" />
-          )}
-        </button>
+        <Switch
+          onChange={toggleTheme}
+          checked={title === "darkTheme"}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          width={40}
+          height={27}
+          handleDiameter={20}
+          offColor={colors.DarkGrey}
+          onColor={colors.ioasys}
+        ></Switch>
       </S.Title>
     </>
   );

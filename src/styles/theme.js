@@ -1,4 +1,5 @@
 const theme = {
+  title: "theme",
   colors: {
     Rock: "#B69E31",
     Ghost: "#70559B",

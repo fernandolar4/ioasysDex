@@ -6,14 +6,20 @@ import theme from "./styles/theme";
 import darkTheme from "./styles/darkTheme";
 import GlobalStyles from "./styles/global";
 import React, { useState } from "react";
+import { TemaContext } from "./TemaContext";
 
 function App() {
+  const [tema, setTema] = useState(theme);
+  const toggleTheme = () => {
+    setTema(tema.title === "theme" ? darkTheme : theme);
+  };
   return (
     <Router>
-      {/* <ThemeProvider theme={if localStorage.getItem('theme') === 'light' {theme} else{darkTheme}} />}> */}
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={tema}>
         <GlobalStyles />
-        <Routes />
+        <TemaContext.Provider value={toggleTheme}>
+          <Routes />
+        </TemaContext.Provider>
       </ThemeProvider>
     </Router>
   );

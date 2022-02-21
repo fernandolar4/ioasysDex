@@ -9,13 +9,14 @@ export const Body = styled.body`
 
 export const PokeFoto = styled.div`
   background-image: url(${Pokeball});
+  background-size: 80%;
   background-position: left center;
   background-repeat: no-repeat;
   background-color: ${({ theme }) => theme.colors.Grass};
   width: 33%;
   height: 100%;
   padding: 17px 27px;
-
+  position: relative;
   div {
     display: flex;
     justify-content: space-between;
@@ -34,9 +35,9 @@ export const PokeFoto = styled.div`
 
   .pokefoto {
     margin-top: 33px;
-    width: 391px;
-    position: relative;
-    left: 130px;
+    width: 90%;
+    position: absolute;
+    left: 30%;
   }
 `;
 

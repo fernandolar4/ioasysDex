@@ -26,7 +26,8 @@ export const Title = styled.header`
     color: ${({ theme }) => theme.colors.Ioasys};
     margin-left: 12px;
   }
-  button {
+  ${
+    "" /* button {
     color: ${({ theme }) => theme.colors.Ioasys};
     width: 39px;
     height: 27px;
@@ -36,5 +37,6 @@ export const Title = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
+  } */
   }
 `;
