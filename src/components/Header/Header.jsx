@@ -1,9 +1,10 @@
 import * as S from "./Header.style";
 import Logo from "../../assets/icons/ioasys.svg";
-import { ThemeContext } from "styled-components";
 import React, { useContext } from "react";
-import Switch from "react-switch";
+
+import { ThemeContext } from "styled-components";
 import { TemaContext } from "../../TemaContext";
+import Switch from "react-switch";
 
 const Header = () => {
   const { title } = useContext(ThemeContext);
@@ -18,7 +19,7 @@ const Header = () => {
         </div>
         <Switch
           onChange={toggleTheme}
-          checked={title === "theme"}
+          checked={title === "lightTheme"}
           checkedIcon={false}
           uncheckedIcon={false}
           width={40}
