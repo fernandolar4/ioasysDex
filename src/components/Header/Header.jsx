@@ -6,8 +6,8 @@ import Switch from "react-switch";
 import { TemaContext } from "../../TemaContext";
 
 const Header = () => {
-  const { colors, title } = useContext(ThemeContext);
-  const  toggleTheme  = useContext(TemaContext);
+  const { title } = useContext(ThemeContext);
+  const toggleTheme = useContext(TemaContext);
   return (
     <>
       <S.ColorContainer />
@@ -24,8 +24,9 @@ const Header = () => {
           width={40}
           height={27}
           handleDiameter={20}
-          offColor={colors.DarkGrey}
-          onColor={colors.ioasys}
+          offColor={"EC0344"}
+          onColor={"EC0344"}
+          onHandleColor={"666666"}
         ></Switch>
       </S.Title>
     </>
