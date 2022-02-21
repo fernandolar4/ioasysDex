@@ -24,7 +24,7 @@ const Header = () => {
           width={40}
           height={27}
           handleDiameter={20}
-          offColor={"#transparent"}
+          offColor={"transparent"}
           onColor={"transparent"}
           onHandleColor={"#EC0344"}
           offHandleColor={"#8D8B92"}
