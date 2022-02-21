@@ -9,9 +9,11 @@ import React, { useState } from "react";
 import { TemaContext } from "./TemaContext";
 
 function App() {
+
   const [tema, setTema] = useState(theme);
   const toggleTheme = () => {
     setTema(tema.title === "theme" ? darkTheme : theme);
+    
   };
   return (
     <Router>

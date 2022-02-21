@@ -26,17 +26,7 @@ export const Title = styled.header`
     color: ${({ theme }) => theme.colors.Ioasys};
     margin-left: 12px;
   }
-  ${
-    "" /* button {
-    color: ${({ theme }) => theme.colors.Ioasys};
-    width: 39px;
-    height: 27px;
-    border-radius: 40px;
-    background: transparent;
+  .switch {
     border: 1px solid ${({ theme }) => theme.colors.Ioasys};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
   }
 `;

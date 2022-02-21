@@ -18,15 +18,18 @@ const Header = () => {
         </div>
         <Switch
           onChange={toggleTheme}
-          checked={title === "darkTheme"}
+          checked={title === "theme"}
           checkedIcon={false}
           uncheckedIcon={false}
           width={40}
           height={27}
           handleDiameter={20}
-          offColor={"EC0344"}
-          onColor={"EC0344"}
-          onHandleColor={"666666"}
+          offColor={"#transparent"}
+          onColor={"transparent"}
+          onHandleColor={"#EC0344"}
+          offHandleColor={"#8D8B92"}
+          borderRadius={40}
+          className={"switch"}
         ></Switch>
       </S.Title>
     </>
