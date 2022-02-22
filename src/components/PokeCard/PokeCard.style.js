@@ -26,13 +26,18 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid ${({ theme }) => theme.colors.Ioasys};
+  border: 1px solid
+    ${(props) =>
+      ({ theme }) =>
+        theme.colors[props.type]};
   border-radius: 10px;
 
   p {
     font-size: 11px;
     align-self: right;
-    color: ${({ theme }) => theme.colors.Ioasys};
+    color: ${(props) =>
+      ({ theme }) =>
+        theme.colors[props.type]};
     align-self: flex-end;
     margin: 7px 10px 0px 0px;
   }
@@ -42,7 +47,11 @@ export const Card = styled.div`
   div {
     width: 102%;
     height: 102%;
-    background-color: ${({ theme }) => theme.colors.Ioasys};
+
+    background-color: ${(props) =>
+      ({ theme }) =>
+        theme.colors[props.type]};
+
     border-radius: 0px 0px 10px 10px;
     display: flex;
     align-items: center;

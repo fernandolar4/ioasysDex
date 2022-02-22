@@ -25,8 +25,8 @@ const Header = () => {
           width={40}
           height={27}
           handleDiameter={20}
-          offColor={"transparent"}
-          onColor={"transparent"}
+          offColor={"#212121"}
+          onColor={"#F7F7F7"}
           onHandleColor={"#EC0344"}
           offHandleColor={"#8D8B92"}
           borderRadius={40}

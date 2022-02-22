@@ -1,19 +1,27 @@
 import * as S from "./PokeCard.style";
 
-import pokemons from "../../mocks/pokemon.json";
+const PokeCard = (props) => {
+  const { pokemons } = props;
 
-const PokeCard = () => {
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   return (
     <S.CardContainer>
-      {pokemons.map((poke) => (
-        <S.Card id={poke.id} color={poke.type}>
-          <p>#{poke.id}</p>
-          <img src={poke.image} alt={poke.description} />
-          <div>
-            <p>{poke.name}</p>
-          </div>
-        </S.Card>
-      ))}
+      {pokemons.length > 0 &&
+        pokemons.map((poke) => (
+          <S.Card
+            key={poke.data.id}
+            type={capitalizeFirstLetter(poke.data.types[0].type.name)}
+          >
+            <p>#{poke.data.id}</p>
+            <img src={poke.data.sprites.front_default} alt={poke.data.name} />
+            <div>
+              <p>{capitalizeFirstLetter(poke.data.name)}</p>
+            </div>
+          </S.Card>
+        ))}
     </S.CardContainer>
   );
 };
