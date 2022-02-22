@@ -6,4 +6,8 @@ export const Box = styled.div`
   align-items: center;
   max-width: 830px;
   margin: 72px auto;
+  @media (max-width: 880px) {
+    max-width: 90%;
+    margin: auto;
+  }
 `;

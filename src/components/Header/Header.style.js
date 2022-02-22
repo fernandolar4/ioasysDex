@@ -14,6 +14,10 @@ export const Title = styled.header`
   align-items: center;
   max-width: 830px;
   margin: 60px auto;
+
+  @media (max-width: 900px) {
+    max-width: 80%;
+  }
   div {
     display: flex;
     align-items: center;
@@ -25,6 +29,9 @@ export const Title = styled.header`
     font-size: 32px;
     color: ${({ theme }) => theme.colors.Ioasys};
     margin-left: 12px;
+    @media (max-width: 900px) {
+      font-size: 24px;
+    }
   }
   .switch {
     border: 1px solid ${({ theme }) => theme.colors.Ioasys};

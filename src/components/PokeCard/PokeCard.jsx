@@ -16,18 +16,19 @@ const PokeCard = (props) => {
     <S.CardContainer>
       {pokemons.length > 0 &&
         pokemons.map((poke) => (
-          <S.Card
-            to={"/status"}
-            state={{ pokemon: poke.data }}
-            key={poke.data.id}
-            type={capitalizeFirstLetter(poke.data.types[0].type.name)}
-          >
-            <p>#{formatNumber(poke.data.id)}</p>
-            <img src={poke.data.sprites.front_default} alt={poke.data.name} />
-            <div>
-              <p>{capitalizeFirstLetter(poke.data.name)}</p>
-            </div>
-          </S.Card>
+          <Link to={"/status"} style={{ textDecoration: "none" }}>
+            <S.Card
+              state={{ pokemon: { poke } }}
+              key={poke.data.id}
+              type={capitalizeFirstLetter(poke.data.types[0].type.name)}
+            >
+              <p>#{formatNumber(poke.data.id)}</p>
+              <img src={poke.data.sprites.front_default} alt={poke.data.name} />
+              <div>
+                <p>{capitalizeFirstLetter(poke.data.name)}</p>
+              </div>
+            </S.Card>
+          </Link>
         ))}
     </S.CardContainer>
   );
