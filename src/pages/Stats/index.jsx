@@ -13,9 +13,10 @@ import Height from "../../assets/icons/height.svg";
 
 import pokemons from "../../mocks/pokemon.json";
 
-const Stats = (props) => {
+const Stats = () => {
   const location = useLocation();
-  console.log("aksdkpoa", props);
+  const pokemon = location.state;
+  console.log("aksdkpoa", location);
   return (
     <>
       <Header />
@@ -27,7 +28,7 @@ const Stats = (props) => {
             <span>ABOUT</span>
           </div>
           <img
-            class="pokefoto"
+            className="pokefoto"
             src={pokemons[0].image}
             alt={pokemons[0].name}
           />
@@ -68,7 +69,7 @@ const Stats = (props) => {
           </S.PokeText>
           <S.PokeTableName>Base Stats</S.PokeTableName>
           <S.PokeTable>
-            <div class="stats">
+            <div className="stats">
               <p>HP</p>
               <p>ATK</p>
               <p>DEF</p>
@@ -76,8 +77,8 @@ const Stats = (props) => {
               <p>SDEF</p>
               <p>SPD</p>
             </div>
-            <div class="line"></div>
-            <div class="numbers">
+            <div className="line"></div>
+            <div className="numbers">
               <p>{pokemons[0].stats[5].value}</p>
               <p>{pokemons[0].stats[4].value}</p>
               <p>{pokemons[0].stats[3].value}</p>
@@ -85,7 +86,7 @@ const Stats = (props) => {
               <p>{pokemons[0].stats[1].value}</p>
               <p>{pokemons[0].stats[0].value}</p>
             </div>
-            <div class="graph"></div>
+            <div className="graph"></div>
           </S.PokeTable>
         </S.PokeStatsList>
         <S.Filler />

@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const CardContainer = styled.div`
   gap: 20px;
   display: grid;
@@ -25,7 +23,7 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const Card = styled.div`
+export const Card = styled.Link`
   display: flex;
   flex-direction: column;
   align-items: center;

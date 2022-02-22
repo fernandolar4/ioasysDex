@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Pokeball from "../../assets/icons/Pokeball.svg";
 
-export const Body = styled.body`
+export const Body = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100vh;
 `;
 
 export const PokeFoto = styled.div`
