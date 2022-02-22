@@ -9,15 +9,29 @@ import PokeCard from "../../components/PokeCard";
 import getAllPokemons from "../../services/getAllPokemons";
 
 const Home = () => {
-  const [pokemons, setPokemons] = useState({});
+  const [pokemons, setPokemons] = useState([]);
+  const [scrollEnds, setScrollEnds] = useState(false);
+  const [nextPokemonsUrl, setNextPokemonsUrl] = useState("/pokemon");
+
+  window.onscroll = function (ev) {
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+      setScrollEnds(true);
+    } else {
+      setScrollEnds(false);
+    }
+  };
 
   useEffect(() => {
+    if (!scrollEnds && pokemons.length !== 0) {
+      return;
+    }
     const handleGetAllPokemons = async () => {
-      const allPokemons = await getAllPokemons();
-      setPokemons(allPokemons);
+      const allPokemons = await getAllPokemons(nextPokemonsUrl);
+      setPokemons([...pokemons, ...allPokemons.results]);
+      setNextPokemonsUrl(allPokemons.next);
     };
     handleGetAllPokemons();
-  }, []);
+  }, [scrollEnds]);
   return (
     <>
       <Header />

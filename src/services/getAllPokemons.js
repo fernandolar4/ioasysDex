@@ -1,18 +1,20 @@
 import api from "./api";
 
-const getAllPokemons = async () => {
+const getAllPokemons = (apiCall) => {
+  let nextApiCall = "";
   try {
     return api
-      .get("/pokemon")
+      .get(apiCall)
       .then((data) => {
         let results = data.data.results;
-        let promisesArray = results.map((result) => {
+        let pokemons = results.map((result) => {
           return api.get(result.url);
         });
-        return Promise.all(promisesArray);
+        nextApiCall = data.data.next;
+        return Promise.all(pokemons);
       })
       .then((data) => {
-        return data;
+        return { results: data, next: nextApiCall };
       });
   } catch (error) {
     console.error(error);
