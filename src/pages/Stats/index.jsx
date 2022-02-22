@@ -1,5 +1,7 @@
 import * as S from "./Stats.style";
 
+import { useLocation } from "react-router-dom";
+
 import Header from "../../components/Header";
 import BackButton from "../../components/BackButton";
 
@@ -11,7 +13,9 @@ import Height from "../../assets/icons/height.svg";
 
 import pokemons from "../../mocks/pokemon.json";
 
-const Stats = () => {
+const Stats = (props) => {
+  const location = useLocation();
+  console.log("aksdkpoa", props);
   return (
     <>
       <Header />

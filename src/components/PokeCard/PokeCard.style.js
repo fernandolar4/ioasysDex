@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
+
+
 export const CardContainer = styled.div`
   gap: 20px;
   display: grid;
   margin: 70px auto;
+  margin-bottom: 30px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -59,6 +62,7 @@ export const Card = styled.div`
 
     p {
       background: transparent;
+      text-align: center;
       align-self: center;
       padding: 0px 5px 5px 5px;
       font-size: 13px;
