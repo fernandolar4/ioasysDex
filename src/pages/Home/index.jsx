@@ -37,7 +37,7 @@ const Home = () => {
       <Header />
       <S.Box>
         <Search />
-        <FavoriteButton />
+        <FavoriteButton className={"nameless"} />
       </S.Box>
       <PokeCard pokemons={pokemons} />
     </>

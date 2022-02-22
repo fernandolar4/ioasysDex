@@ -10,4 +10,10 @@ export const Box = styled.div`
     max-width: 90%;
     margin: auto;
   }
+  div{
+    a{
+      @media (max-width: 900px) {
+      font-size: 0px;
+      
+  }
 `;
