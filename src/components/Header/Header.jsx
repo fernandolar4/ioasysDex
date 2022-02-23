@@ -10,7 +10,7 @@ const Header = () => {
   const { title } = useContext(ThemeContext);
   const toggleTheme = useContext(TemaContext);
   return (
-    <>
+    <div className="headerContainer">
       <S.ColorContainer />
       <S.Title>
         <div>
@@ -33,7 +33,7 @@ const Header = () => {
           className={"switch"}
         ></Switch>
       </S.Title>
-    </>
+    </div>
   );
 };
 

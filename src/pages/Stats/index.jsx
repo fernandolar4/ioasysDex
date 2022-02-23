@@ -18,7 +18,7 @@ const Stats = () => {
   const pokemon = location.state;
   console.log("aksdkpoa", location);
   return (
-    <>
+    <S.PageContainer>
       <Header />
       <S.Body>
         <S.PokeFoto>
@@ -34,7 +34,7 @@ const Stats = () => {
           />
         </S.PokeFoto>
         <S.PokeStatsList>
-          <S.PokeName>
+          <S.PokeName className="pokeNameFull">
             <img src={EmptyHearth} alt="Favoritar" />
             <h2>{pokemons[0].name}</h2>
             <h3>#{pokemons[0].id}</h3>
@@ -60,7 +60,7 @@ const Stats = () => {
               <h4>Height</h4>
             </div>
             <div>
-              <p>Chlorophyll / Overgrow</p>
+              <p>Chlorophyll / Overgrowwwwwwwwwwwwwwwwwww</p>
               <h4>Ability</h4>
             </div>
           </S.PokeFitness>
@@ -91,7 +91,7 @@ const Stats = () => {
         </S.PokeStatsList>
         <S.Filler />
       </S.Body>
-    </>
+    </S.PageContainer>
   );
 };
 

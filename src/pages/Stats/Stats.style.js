@@ -1,11 +1,30 @@
 import styled from "styled-components";
 import Pokeball from "../../assets/icons/Pokeball.svg";
 
+export const PageContainer = styled.div`
+  @media (max-width: 900px) {
+    background-color: ${({ theme }) => theme.colors.Grass};
+  }
+  .headerContainer {
+    @media (max-width: 900px) {
+      display: none;
+      background-color: ${({ theme }) => theme.colors.Grass};
+    }
+  }
+`;
+
 export const Body = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+
+  @media (max-width: 900px) {
+    height: 100%;
+    background-color: ${({ theme }) => theme.colors.Grass};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const PokeFoto = styled.div`
@@ -15,15 +34,26 @@ export const PokeFoto = styled.div`
   background-repeat: no-repeat;
   background-color: ${({ theme }) => theme.colors.Grass};
   width: 33%;
-  height: 100%;
+  height: 90vh;
   padding: 17px 27px;
   position: relative;
+  @media (max-width: 900px) {
+    position: relative;
+    width: 100vw;
+    height: 35vh;
+    background-size: 50%;
+    background-position: 45vw center;
+  }
+
   div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: transparent;
     color: ${({ theme }) => theme.colors.White};
+    @media (max-width: 900px) {
+      display: none;
+    }
   }
   span,
   a,
@@ -39,19 +69,35 @@ export const PokeFoto = styled.div`
     width: 90%;
     position: absolute;
     left: 30%;
+    @media (max-width: 900px) {
+      position: absolute;
+      left: 25vw;
+      top: 5vh;
+      width: 40vw;
+    }
   }
 `;
 
 export const PokeStatsList = styled.div`
   width: 33vw;
-
   height: 100vh;
   padding: 17px 27px 27px 27px;
+  height: 90vh;
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    border-radius: 15px;
+  }
 `;
 
 export const PokeName = styled.div`
   display: flex;
   align-items: center;
+
+  
+  }
 
   h2,
   h3 {
@@ -91,9 +137,17 @@ export const PokeFitness = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 40vw;
+
     p {
       font-size: 16px;
       color: ${({ theme }) => theme.colors.Text};
+      overflow-wrap: break-word;
+      max-width: 10vw;
+      @media (max-width: 900px) {
+        max-width: 40vw;
+        font-size: 14px;
+      }
     }
     img {
       fill: ${({ theme }) => theme.colors.DarkGray};
@@ -151,4 +205,7 @@ export const PokeTable = styled.div`
 
 export const Filler = styled.div`
   width: 20vw;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
