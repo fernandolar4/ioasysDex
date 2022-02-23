@@ -34,9 +34,12 @@ const Stats = () => {
           />
         </S.PokeFoto>
         <S.PokeStatsList>
-          <S.PokeName className="pokeNameFull">
-            <img src={EmptyHearth} alt="Favoritar" />
-            <h2>{pokemons[0].name}</h2>
+          <S.PokeName>
+            <div>
+              <img src={EmptyHearth} alt="Favoritar" />
+              <h2>{pokemons[0].name}</h2>
+            </div>
+
             <h3>#{pokemons[0].id}</h3>
           </S.PokeName>
           <S.PokeType>

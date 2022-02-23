@@ -70,7 +70,6 @@ export const PokeFoto = styled.div`
     position: absolute;
     left: 30%;
     @media (max-width: 900px) {
-      position: absolute;
       left: 25vw;
       top: 5vh;
       width: 40vw;
@@ -96,20 +95,45 @@ export const PokeName = styled.div`
   display: flex;
   align-items: center;
 
-  
+  @media (max-width: 900px) {
+    position: absolute;
+    background-color: transparent;
+    top: 20px;
+    color: ${({ theme }) => theme.colors.White};
+
+    width: 85vw;
+    justify-content: space-between;
+  }
   }
 
-  h2,
+div{
+  display: flex;
+  background-color: transparent;
+
+  img{
+    background-color: transparent;
+
+  }
+  h2{
+    font-size: 24px;
+    margin: 0px 25px 0px 11px;
+    color: ${({ theme }) => theme.colors.Grass};
+    font-weight: 700;
+    background-color: transparent;
+    @media (max-width: 900px) {
+    color: ${({ theme }) => theme.colors.White};
+  }
+  }
+}
+ 
   h3 {
     color: ${({ theme }) => theme.colors.Grass};
     font-weight: 700;
-  }
-  h2 {
-    font-size: 24px;
-    margin: 0px 25px 0px 11px;
-  }
-  h3 {
+    background-color: transparent;
     font-size: 12px;
+    @media (max-width: 900px) {
+      color: ${({ theme }) => theme.colors.White};
+  }
   }
 `;
 
