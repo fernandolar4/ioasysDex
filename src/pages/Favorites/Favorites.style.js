@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+export const PageContainer = styled.div`
+  .mobileOnlyButton {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    .backbutton {
+      display: none;
+      @media (max-width: 900px) {
+        display: flex;
+        align-items: center;
+    }
+  }
+`;
+
 export const Linha = styled.div`
   display: flex;
   align-items: center;
@@ -22,4 +36,12 @@ export const Links = styled.div`
   @media (max-width: 900px) {
     max-width: 80;
   }
+  div{
+    .backbutton{
+      @media (max-width: 900px) {
+        display: none;
+      
+  }
+
+  
 `;

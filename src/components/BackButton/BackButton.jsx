@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const BackButton = () => {
   return (
     <S.GoBack>
-      <Link to="/">
+      <Link to="/" className="backbutton">
         <img src={BackArrow} alt="Voltar" /> Voltar
       </Link>
     </S.GoBack>
