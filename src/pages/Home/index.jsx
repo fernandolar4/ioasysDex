@@ -33,14 +33,14 @@ const Home = () => {
     handleGetAllPokemons();
   }, [scrollEnds]);
   return (
-    <>
+    <S.HomeContainer>
       <Header />
       <S.Box>
         <Search />
         <FavoriteButton className={"nameless"} />
       </S.Box>
       <PokeCard pokemons={pokemons} />
-    </>
+    </S.HomeContainer>
   );
 };
 
