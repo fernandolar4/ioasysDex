@@ -27,7 +27,7 @@ const Stats = () => {
   console.log("pokemon", pokemon);
   return (
     <S.PageContainer>
-      <Header />
+      <Header typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)} />
       <S.Body typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}>
         <S.PokeFoto
           typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
@@ -124,7 +124,44 @@ const Stats = () => {
               <p>{pokemon.stats[4].base_stat}</p>
               <p>{pokemon.stats[5].base_stat}</p>
             </div>
-            <div className="graph"></div>
+            <div className="graph">
+              <div className="border">
+                <div
+                  className="percentage"
+                  style={{ width: pokemon.stats[0].base_stat }}
+                ></div>
+              </div>
+              <div className="border">
+                <div
+                  className="percentage"
+                  style={{ width: pokemon.stats[1].base_stat }}
+                ></div>
+              </div>
+              <div className="border">
+                <div
+                  className="percentage"
+                  style={{ width: pokemon.stats[2].base_stat }}
+                ></div>
+              </div>
+              <div className="border">
+                <div
+                  className="percentage"
+                  style={{ width: pokemon.stats[3].base_stat }}
+                ></div>
+              </div>
+              <div className="border">
+                <div
+                  className="percentage"
+                  style={{ width: pokemon.stats[4].base_stat }}
+                ></div>
+              </div>
+              <div className="border">
+                <div
+                  className="percentage"
+                  style={{ width: pokemon.stats[5].base_stat }}
+                ></div>
+              </div>
+            </div>
           </S.PokeTable>
         </S.PokeStatsList>
         <S.Filler />

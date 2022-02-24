@@ -229,12 +229,37 @@ export const PokeTable = styled.div`
   }
 
   .line {
+    margin-left: 14px;
     border: 1px solid ${({ theme }) => theme.colors.LightGray};
+    opacity: 0.5;
   }
   .numbers {
     p {
+      margin-left: 14px;
       font-weight: normal;
       font-size: 14px;
+    }
+  }
+  .graph {
+    margin-top: 7px;
+    margin-left: 14px;
+    .border {
+      background-color: ${(props) =>
+        ({ theme }) =>
+          theme.colors[props.typeColor]};
+      opacity: 0.65;
+
+      width: 255px;
+      height: 6px;
+      margin-bottom: 15px;
+      .percentage {
+        mix-blend-mode: multiply;
+        background-color: ${(props) =>
+          ({ theme }) =>
+            theme.colors[props.typeColor]};
+
+        height: 6px;
+      }
     }
   }
 `;

@@ -2,14 +2,15 @@ import styled from "styled-components";
 
 export const PageContainer = styled.div`
   .mobileOnlyButton {
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .backbutton {
       display: none;
       @media (max-width: 900px) {
         display: flex;
         align-items: center;
+      }
     }
   }
 `;
@@ -22,6 +23,7 @@ export const Linha = styled.div`
   max-width: 830px;
   height: 2px;
   background-color: ${({ theme }) => theme.colors.LightGray};
+  opacity: 0.5;
   @media (max-width: 900px) {
     display: none;
   }
