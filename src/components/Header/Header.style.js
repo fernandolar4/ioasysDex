@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const ColorContainer = styled.div`
   display: block;
-  background-color: ${({ theme }) => theme.colors.Ioasys};
+  background-color: ${(props) =>
+    ({ theme }) =>
+      theme.colors[props.typeColor] || theme.colors.Ioasys};
   height: 15px;
   width: 100%;
 `;

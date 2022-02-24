@@ -6,12 +6,13 @@ import { ThemeContext } from "styled-components";
 import { TemaContext } from "../../TemaContext";
 import Switch from "react-switch";
 
-const Header = () => {
+const Header = (props) => {
   const { title } = useContext(ThemeContext);
   const toggleTheme = useContext(TemaContext);
+
   return (
     <div className="headerContainer">
-      <S.ColorContainer />
+      <S.ColorContainer typeColor={props.typeColor} />
       <S.Title>
         <div>
           <img src={Logo} alt="ioasys" />

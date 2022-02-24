@@ -12,8 +12,8 @@ export const PageContainer = styled.div`
 export const Body = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
+  align-items: flex-start;
+  height: 95vh;
   @media (max-width: 900px) {
     height: 100%;
     background-color: ${(props) =>
@@ -22,19 +22,20 @@ export const Body = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 `;
 
 export const PokeFoto = styled.div`
   background-image: url(${Pokeball});
-  background-size: 80%;
+  background-size: 90%;
   background-position: left center;
   background-repeat: no-repeat;
   background-color: ${(props) =>
     ({ theme }) =>
       theme.colors[props.typeColor]};
   width: 33%;
-  height: 100vh;
+  height: 100%;
   padding: 17px 27px;
   position: relative;
   @media (max-width: 900px) {
@@ -81,11 +82,10 @@ export const PokeFoto = styled.div`
 export const PokeStatsList = styled.div`
   width: 33vw;
   height: 100vh;
-  padding: 17px 27px 27px 27px;
-  height: 90vh;
+  padding: 10px 0px 27px 27px;
+  height: 100%;
 
   @media (max-width: 900px) {
-    height: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
