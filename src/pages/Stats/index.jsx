@@ -9,17 +9,29 @@ import FullHearth from "../../assets/icons/FullHeart.svg";
 import Weight from "../../assets/icons/weight.svg";
 import Height from "../../assets/icons/height.svg";
 
-import pokemons from "../../mocks/pokemon.json";
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
+const formatNumber = (number) => {
+  return ("00" + number).slice(-3);
+};
+
+const formatValues = (number) => {
+  return number / 10;
+};
 
 const Stats = () => {
   const location = useLocation();
-  // const { pokemon } = location.state;
-  console.log("location", location);
+  const pokemon = location.state;
+  console.log("pokemon", pokemon);
   return (
     <S.PageContainer>
       <Header />
-      <S.Body>
-        <S.PokeFoto>
+      <S.Body typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}>
+        <S.PokeFoto
+          typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
+        >
           <div>
             <span></span>
             <BackButton />
@@ -27,49 +39,74 @@ const Stats = () => {
           </div>
           <img
             className="pokefoto"
-            src={pokemons[0].image}
-            alt={pokemons[0].name}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
+            alt={pokemon.name}
           />
         </S.PokeFoto>
         <S.PokeStatsList>
-          <S.PokeName>
+          <S.PokeName
+            typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
+          >
             <div>
               <img src={EmptyHearth} alt="Favoritar" />
-              <h2>{pokemons[0].name}</h2>
+              <h2>{capitalizeFirstLetter(pokemon.name)}</h2>
             </div>
 
-            <h3>#{pokemons[0].id}</h3>
+            <h3>#{formatNumber(pokemon.id)}</h3>
           </S.PokeName>
-          <S.PokeType>
-            {pokemons[0].types.map((type) => (
-              <p>{type}</p>
-            ))}
+          <S.PokeType
+            typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
+          >
+            <p className="pokefirsttype">
+              {capitalizeFirstLetter(pokemon.types[0].type.name)}
+            </p>
+            <p className="pokesecondtype">
+              {capitalizeFirstLetter(pokemon.types[0].type.name)}
+            </p>
           </S.PokeType>
           <S.PokeFitness>
             <div>
               <p>
                 <img src={Weight} alt="Peso"></img>
-                6,9 kg
+                {formatValues(pokemon.weight)} KG
               </p>
               <h4>Weight</h4>
             </div>
             <div>
               <p>
                 <img src={Height} alt="Altura"></img>
-                0,7 m
+                {formatValues(pokemon.height)} M
               </p>
               <h4>Height</h4>
             </div>
             <div>
-              <p>Chlorophyll / Overgrowwwwwwwwwwwwwwwwwww</p>
+              <p>
+                {capitalizeFirstLetter(pokemon.abilities[0].ability.name)}/
+                {capitalizeFirstLetter(pokemon.abilities[0].ability.name)}
+              </p>
               <h4>Ability</h4>
             </div>
           </S.PokeFitness>
           <S.PokeText>
-            <p>{pokemons[0].description}</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              leo felis, vulputate vitae sapien eu, feugiat ultrices nibh. Sed
+              neque diam, mollis eu consequat eget, porta eget ante. Integer
+              diam sem, volutpat varius consectetur vitae, congue a elit. Nullam
+              mattis nibh quis quam aliquet pulvinar. Suspendisse potenti. Nam
+              posuere auctor nunc vitae consectetur. Etiam in nibh et nisl
+              accumsan rutrum. Cras venenatis eros metus, pellentesque congue
+              lorem auctor sed.{" "}
+            </p>
           </S.PokeText>
-          <S.PokeTableName>Base Stats</S.PokeTableName>
-          <S.PokeTable>
+          <S.PokeTableName
+            typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
+          >
+            Base Stats
+          </S.PokeTableName>
+          <S.PokeTable
+            typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
+          >
             <div className="stats">
               <p>HP</p>
               <p>ATK</p>
@@ -80,12 +117,12 @@ const Stats = () => {
             </div>
             <div className="line"></div>
             <div className="numbers">
-              <p>{pokemons[0].stats[5].value}</p>
-              <p>{pokemons[0].stats[4].value}</p>
-              <p>{pokemons[0].stats[3].value}</p>
-              <p>{pokemons[0].stats[2].value}</p>
-              <p>{pokemons[0].stats[1].value}</p>
-              <p>{pokemons[0].stats[0].value}</p>
+              <p>{pokemon.stats[0].base_stat}</p>
+              <p>{pokemon.stats[1].base_stat}</p>
+              <p>{pokemon.stats[2].base_stat}</p>
+              <p>{pokemon.stats[3].base_stat}</p>
+              <p>{pokemon.stats[4].base_stat}</p>
+              <p>{pokemon.stats[5].base_stat}</p>
             </div>
             <div className="graph"></div>
           </S.PokeTable>

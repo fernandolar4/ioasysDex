@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-  min-height: 101vh;
+  min-height: 110vh;
 `;
 
 export const Box = styled.div`

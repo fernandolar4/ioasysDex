@@ -19,7 +19,7 @@ const PokeCard = (props) => {
           <Link
             to={`/stats`}
             key={poke.data.id}
-            state={{ state: "ahahaha" }}
+            state={poke.data}
             style={{ textDecoration: "none" }}
           >
             <S.Card type={capitalizeFirstLetter(poke.data.types[0].type.name)}>

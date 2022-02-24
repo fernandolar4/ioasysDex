@@ -2,13 +2,9 @@ import styled from "styled-components";
 import Pokeball from "../../assets/icons/Pokeball.svg";
 
 export const PageContainer = styled.div`
-  @media (max-width: 900px) {
-    background-color: ${({ theme }) => theme.colors.Grass};
-  }
   .headerContainer {
     @media (max-width: 900px) {
       display: none;
-      background-color: ${({ theme }) => theme.colors.Grass};
     }
   }
 `;
@@ -20,7 +16,9 @@ export const Body = styled.div`
 
   @media (max-width: 900px) {
     height: 100%;
-    background-color: ${({ theme }) => theme.colors.Grass};
+    background-color: ${(props) =>
+      ({ theme }) =>
+        theme.colors[props.typeColor]};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,9 +30,11 @@ export const PokeFoto = styled.div`
   background-size: 80%;
   background-position: left center;
   background-repeat: no-repeat;
-  background-color: ${({ theme }) => theme.colors.Grass};
+  background-color: ${(props) =>
+    ({ theme }) =>
+      theme.colors[props.typeColor]};
   width: 33%;
-  height: 90vh;
+  height: 100vh;
   padding: 17px 27px;
   position: relative;
   @media (max-width: 900px) {
@@ -66,13 +66,15 @@ export const PokeFoto = styled.div`
 
   .pokefoto {
     margin-top: 33px;
-    width: 90%;
+    max-width: 90%;
+
     position: absolute;
     left: 30%;
     @media (max-width: 900px) {
-      left: 25vw;
-      top: 5vh;
-      width: 40vw;
+      left: 32vw;
+      top: 7vh;
+      max-width: 35vw;
+      max-height: 35vw;
     }
   }
 `;
@@ -117,7 +119,9 @@ div{
   h2{
     font-size: 24px;
     margin: 0px 25px 0px 11px;
-    color: ${({ theme }) => theme.colors.Grass};
+    color: ${(props) =>
+      ({ theme }) =>
+        theme.colors[props.typeColor]};
     font-weight: 700;
     background-color: transparent;
     @media (max-width: 900px) {
@@ -127,7 +131,9 @@ div{
 }
  
   h3 {
-    color: ${({ theme }) => theme.colors.Grass};
+    color: ${(props) =>
+      ({ theme }) =>
+        theme.colors[props.typeColor]};
     font-weight: 700;
     background-color: transparent;
     font-size: 12px;
@@ -144,7 +150,9 @@ export const PokeType = styled.div`
   p {
     margin-right: 10px;
     color: ${({ theme }) => theme.colors.White};
-    background-color: ${({ theme }) => theme.colors.Grass};
+    background-color: ${(props) =>
+      ({ theme }) =>
+        theme.colors[props.typeColor]};
     border-radius: 20px;
     font-weight: 700;
     padding: 2px 8px 2px 8px;
@@ -167,7 +175,7 @@ export const PokeFitness = styled.div`
       font-size: 16px;
       color: ${({ theme }) => theme.colors.Text};
       overflow-wrap: break-word;
-      max-width: 10vw;
+      max-width: 15vw;
       @media (max-width: 900px) {
         max-width: 40vw;
         font-size: 14px;
@@ -197,7 +205,9 @@ export const PokeText = styled.p`
 
 export const PokeTableName = styled.p`
   margin-top: 30px;
-  color: ${({ theme }) => theme.colors.Grass};
+  color: ${(props) =>
+    ({ theme }) =>
+      theme.colors[props.typeColor]};
   font-weight: bold;
   font-size: 18px;
   line-height: 16px;
@@ -210,7 +220,9 @@ export const PokeTable = styled.div`
 
   .stats {
     p {
-      color: ${({ theme }) => theme.colors.Grass};
+      color: ${(props) =>
+        ({ theme }) =>
+          theme.colors[props.typeColor]};
       font-weight: 600;
       font-size: 14px;
     }
