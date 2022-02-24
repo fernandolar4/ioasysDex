@@ -248,16 +248,17 @@ export const PokeTable = styled.div`
         ({ theme }) =>
           theme.colors[props.typeColor]};
       opacity: 0.65;
-
-      width: 255px;
+      width: 300px;
       height: 6px;
       margin-bottom: 15px;
+      @media (max-width: 900px) {
+        width: 100px;
+      }
       .percentage {
         mix-blend-mode: multiply;
         background-color: ${(props) =>
           ({ theme }) =>
             theme.colors[props.typeColor]};
-
         height: 6px;
       }
     }

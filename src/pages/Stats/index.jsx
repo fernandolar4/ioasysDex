@@ -21,6 +21,10 @@ const formatValues = (number) => {
   return number / 10;
 };
 
+const statsPercentage = (number) => {
+  return (number / 255) * 100 + "%";
+};
+
 const Stats = () => {
   const location = useLocation();
   const pokemon = location.state;
@@ -128,37 +132,37 @@ const Stats = () => {
               <div className="border">
                 <div
                   className="percentage"
-                  style={{ width: pokemon.stats[0].base_stat }}
+                  style={{ width: statsPercentage(pokemon.stats[0].base_stat) }}
                 ></div>
               </div>
               <div className="border">
                 <div
                   className="percentage"
-                  style={{ width: pokemon.stats[1].base_stat }}
+                  style={{ width: statsPercentage(pokemon.stats[1].base_stat) }}
                 ></div>
               </div>
               <div className="border">
                 <div
                   className="percentage"
-                  style={{ width: pokemon.stats[2].base_stat }}
+                  style={{ width: statsPercentage(pokemon.stats[2].base_stat) }}
                 ></div>
               </div>
               <div className="border">
                 <div
                   className="percentage"
-                  style={{ width: pokemon.stats[3].base_stat }}
+                  style={{ width: statsPercentage(pokemon.stats[3].base_stat) }}
                 ></div>
               </div>
               <div className="border">
                 <div
                   className="percentage"
-                  style={{ width: pokemon.stats[4].base_stat }}
+                  style={{ width: statsPercentage(pokemon.stats[4].base_stat) }}
                 ></div>
               </div>
               <div className="border">
                 <div
                   className="percentage"
-                  style={{ width: pokemon.stats[5].base_stat }}
+                  style={{ width: statsPercentage(pokemon.stats[5].base_stat) }}
                 ></div>
               </div>
             </div>
