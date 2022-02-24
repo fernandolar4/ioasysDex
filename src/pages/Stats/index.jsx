@@ -28,7 +28,7 @@ const statsPercentage = (number) => {
 const Stats = () => {
   const location = useLocation();
   const pokemon = location.state;
-  console.log("pokemon", pokemon);
+
   return (
     <S.PageContainer>
       <Header typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)} />
@@ -58,16 +58,13 @@ const Stats = () => {
 
             <h3>#{formatNumber(pokemon.id)}</h3>
           </S.PokeName>
-          <S.PokeType
-            typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
-          >
-            <p className="pokefirsttype">
-              {capitalizeFirstLetter(pokemon.types[0].type.name)}
-            </p>
-            <p className="pokesecondtype">
-              {capitalizeFirstLetter(pokemon.types[0].type.name)}
-            </p>
-          </S.PokeType>
+          <S.PokeTypeContainer>
+            {pokemon.types.map((tp) => (
+              <S.PokeType typeColor={capitalizeFirstLetter(tp.type.name)}>
+                <p>{capitalizeFirstLetter(tp.type.name)}</p>
+              </S.PokeType>
+            ))}
+          </S.PokeTypeContainer>
           <S.PokeFitness>
             <div>
               <p>
@@ -84,10 +81,13 @@ const Stats = () => {
               <h4>Height</h4>
             </div>
             <div>
-              <p>
-                {capitalizeFirstLetter(pokemon.abilities[0].ability.name)}/
-                {capitalizeFirstLetter(pokemon.abilities[0].ability.name)}
-              </p>
+              {pokemon.abilities.map((ab) => (
+                <p>
+                  {capitalizeFirstLetter(ab.ability.name)}
+                  {console.log(ab.ability.name)}
+                </p>
+              ))}
+
               <h4>Ability</h4>
             </div>
           </S.PokeFitness>

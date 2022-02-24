@@ -143,11 +143,15 @@ div{
   }
   }
 `;
+export const PokeTypeContainer = styled.div`
+  display: flex;
+`;
 
 export const PokeType = styled.div`
   display: flex;
   font-size: 12px;
   margin-top: 26px;
+
   p {
     margin-right: 10px;
     color: ${({ theme }) => theme.colors.White};
