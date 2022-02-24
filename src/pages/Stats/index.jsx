@@ -1,13 +1,11 @@
-import * as S from "./Stats.style";
-
 import { useLocation } from "react-router-dom";
 
 import Header from "../../components/Header";
 import BackButton from "../../components/BackButton";
 
+import * as S from "./Stats.style";
 import EmptyHearth from "../../assets/icons/EmptyHeart.svg";
 import FullHearth from "../../assets/icons/FullHeart.svg";
-
 import Weight from "../../assets/icons/weight.svg";
 import Height from "../../assets/icons/height.svg";
 
@@ -15,8 +13,8 @@ import pokemons from "../../mocks/pokemon.json";
 
 const Stats = () => {
   const location = useLocation();
-  const pokemon = location.state;
-  console.log("aksdkpoa", location);
+  // const { pokemon } = location.state;
+  console.log("location", location);
   return (
     <S.PageContainer>
       <Header />

@@ -1,5 +1,5 @@
-import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import { ThemeProvider } from "styled-components";
 import lightTheme from "./styles/lightTheme";
@@ -16,8 +16,8 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={tema}>
-        <GlobalStyles />
         <TemaContext.Provider value={toggleTheme}>
+          <GlobalStyles />
           <Routes />
         </TemaContext.Provider>
       </ThemeProvider>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const FavoriteButton = () => (
   <>
     <S.Div>
-      <Link to="/favoritos">
+      <Link to="/favorites">
         <img src={FullHeart} alt="Coração" />
         Meus favoritos
       </Link>
