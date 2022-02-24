@@ -71,10 +71,9 @@ export const PokeFoto = styled.div`
     position: absolute;
     left: 30%;
     @media (max-width: 900px) {
-      left: 32vw;
+      left: 25vw;
       top: 7vh;
-      max-width: 35vw;
-      max-height: 35vw;
+      max-height: 30vh;
     }
   }
 `;
@@ -86,6 +85,8 @@ export const PokeStatsList = styled.div`
   height: 90vh;
 
   @media (max-width: 900px) {
+    height: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     width: 95vw;
