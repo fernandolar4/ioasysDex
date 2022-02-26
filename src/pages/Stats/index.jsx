@@ -52,6 +52,8 @@ const Stats = () => {
             typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
           >
             <div>
+              {/* MELHORAR A LOGICA DO BOTAO: CHECAR SE JÁ ESTA FAVORITADO, STATE? IF?; CASO NAO MANTER O SETITEM CASO JA ESTEJA MUDAR PARA removeItem()
+            COM ISSO ALTERAR TAMBEM O DISPLAY DO BOTAO */}
               <button
                 onClick={() =>
                   localStorage.setItem(`${pokemon.id}`, JSON.stringify(pokemon))

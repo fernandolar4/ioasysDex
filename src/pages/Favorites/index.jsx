@@ -33,12 +33,12 @@ const Favorites = () => {
         <FavoriteButton />
         <span></span>
       </S.Links>
-      
+
       <S2.CardContainer>
         {pokemons.map((pokemon) => (
           <S2.Card type={capitalizeFirstLetter(pokemon.types[0].type.name)}>
             <p>#{formatNumber(pokemon.id)}</p>
-            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+            <img src={pokemon.sprites.front_shiny} alt={pokemon.name} />
             <div>
               <p>{capitalizeFirstLetter(pokemon.name)}</p>
             </div>
