@@ -52,7 +52,13 @@ const Stats = () => {
             typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
           >
             <div>
-              <img src={EmptyHearth} alt="Favoritar" />
+              <button
+                onClick={() =>
+                  localStorage.setItem(`${pokemon.id}`, JSON.stringify(pokemon))
+                }
+              >
+                <img src={EmptyHearth} alt="Favoritar" />
+              </button>
               <h2>{capitalizeFirstLetter(pokemon.name)}</h2>
             </div>
 
@@ -82,10 +88,7 @@ const Stats = () => {
             </div>
             <div>
               {pokemon.abilities.map((ab) => (
-                <p>
-                  {capitalizeFirstLetter(ab.ability.name)}
-                  {console.log(ab.ability.name)}
-                </p>
+                <p>{capitalizeFirstLetter(ab.ability.name)}</p>
               ))}
 
               <h4>Ability</h4>

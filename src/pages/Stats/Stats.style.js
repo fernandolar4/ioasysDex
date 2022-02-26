@@ -82,7 +82,7 @@ export const PokeFoto = styled.div`
 export const PokeStatsList = styled.div`
   width: 33vw;
   height: 100vh;
-  padding: 10px 0px 27px 27px;
+  padding: 10px 27px 27px 27px;
   height: 100%;
 
   @media (max-width: 900px) {
@@ -107,12 +107,15 @@ export const PokeName = styled.div`
     width: 85vw;
     justify-content: space-between;
   }
-  }
 
 div{
   display: flex;
   background-color: transparent;
 
+  }
+  button{
+    background: transparent;
+  }
   img{
     background-color: transparent;
 
