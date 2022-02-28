@@ -7,6 +7,8 @@ import BackButton from "../../components/BackButton";
 
 const Favorites = () => {
   const pokemons = [];
+  const listaPlaceholders = [];
+  let i = 0;
 
   // Eu sei que isso aqui não ta uma boa pratica mas ta funcionando por enquanto
   for (let i = 0; i < 2000; i++) {
@@ -14,7 +16,13 @@ const Favorites = () => {
       pokemons.push(JSON.parse(localStorage.getItem(i)));
     }
   }
-  pokemons.length = 12;
+  const listaFavoritos = pokemons.slice(0, 12);
+
+  for (i; i < 12 - listaFavoritos.length; i++) {
+    listaPlaceholders.push("placeholder");
+  }
+
+  console.log("listaPlaceholders", listaPlaceholders.length);
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -34,11 +42,10 @@ const Favorites = () => {
       </S.Links>
 
       <S2.CardContainer>
-        {pokemons.map((pokemon, i) => (
+        {listaFavoritos.map((pokemon) => (
           <S2.Card
             type={capitalizeFirstLetter(pokemon.types[0].type.name)}
             key={pokemon.id}
-            onClick={console.log(pokemons.length)}
           >
             <p>#{formatNumber(pokemon.id)}</p>
             <img src={pokemon.sprites.front_shiny} alt={pokemon.name} />
@@ -46,6 +53,9 @@ const Favorites = () => {
               <p>{capitalizeFirstLetter(pokemon.name)}</p>
             </div>
           </S2.Card>
+        ))}
+        {listaPlaceholders.map(() => (
+          <S.Placeholder />
         ))}
       </S2.CardContainer>
 

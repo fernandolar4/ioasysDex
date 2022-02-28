@@ -29,9 +29,6 @@ export const Card = styled.div`
       ({ theme }) =>
         theme.colors[props.type]};
   border-radius: 10px;
-  @media (max-width: 880px) {
-    max-width: 30%s;
-  }
 
   p {
     font-size: 11px;

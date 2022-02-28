@@ -39,12 +39,22 @@ export const Links = styled.div`
   @media (max-width: 900px) {
     max-width: 80;
   }
-  div{
-    .backbutton{
+  div {
+    .backbutton {
       @media (max-width: 900px) {
         display: none;
-      
+      }
+    }
   }
+`;
 
-  
+export const Placeholder = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  background: ${({ theme }) => theme.colors.LightGray};
+  border: 10px solid ${({ theme }) => theme.colors.LightGray};
+  min-height: 150px;
+  opacity: 0.75;
+  border-radius: 10px;
 `;
