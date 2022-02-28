@@ -10,6 +10,7 @@ export const PageContainer = styled.div`
       @media (max-width: 900px) {
         display: flex;
         align-items: center;
+        margin-bottom: 20px;
       }
     }
   }

@@ -38,12 +38,14 @@ export const PokeFoto = styled.div`
   height: 100%;
   padding: 17px 27px;
   position: relative;
+
   @media (max-width: 900px) {
     position: relative;
     width: 100vw;
     height: 35vh;
     background-size: 50%;
     background-position: 45vw center;
+    display: inline-block;
   }
 
   div {
@@ -71,10 +73,18 @@ export const PokeFoto = styled.div`
 
     position: absolute;
     left: 30%;
+
     @media (max-width: 900px) {
-      left: 25vw;
+      max-width: 40vh;
+
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 1;
+
       top: 7vh;
-      max-height: 30vh;
     }
   }
 `;
