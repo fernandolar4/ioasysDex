@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import Header from "../../components/Header";
@@ -29,6 +30,17 @@ const Stats = () => {
   const location = useLocation();
   const pokemon = location.state;
 
+  const [pokemonFavoritado, setPokemonFavoritado] = useState(false);
+
+  function favoritar() {
+    localStorage.setItem(`${pokemon.id}`, JSON.stringify(pokemon));
+    setPokemonFavoritado(true);
+  }
+  function desfavoritar() {
+    localStorage.removeItem(`${pokemon.id}`, JSON.stringify(pokemon));
+    setPokemonFavoritado(false);
+  }
+
   return (
     <S.PageContainer>
       <Header typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)} />
@@ -56,10 +68,13 @@ const Stats = () => {
             COM ISSO ALTERAR TAMBEM O DISPLAY DO BOTAO */}
               <button
                 onClick={() =>
-                  localStorage.setItem(`${pokemon.id}`, JSON.stringify(pokemon))
+                  pokemonFavoritado ? desfavoritar() : favoritar()
                 }
               >
-                <img src={EmptyHearth} alt="Favoritar" />
+                <img
+                  src={pokemonFavoritado ? FullHearth : EmptyHearth}
+                  alt="Favoritar"
+                />
               </button>
               <h2>{capitalizeFirstLetter(pokemon.name)}</h2>
             </div>
