@@ -30,7 +30,9 @@ const Stats = () => {
   const location = useLocation();
   const pokemon = location.state;
 
-  const [pokemonFavoritado, setPokemonFavoritado] = useState(false);
+  const [pokemonFavoritado, setPokemonFavoritado] = useState(
+    localStorage.getItem(pokemon.id)
+  );
 
   function favoritar() {
     localStorage.setItem(`${pokemon.id}`, JSON.stringify(pokemon));
@@ -64,8 +66,6 @@ const Stats = () => {
             typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
           >
             <div>
-              {/* MELHORAR A LOGICA DO BOTAO: CHECAR SE JÁ ESTA FAVORITADO, STATE? IF?; CASO NAO MANTER O SETITEM CASO JA ESTEJA MUDAR PARA removeItem()
-            COM ISSO ALTERAR TAMBEM O DISPLAY DO BOTAO */}
               <button
                 onClick={() =>
                   pokemonFavoritado ? desfavoritar() : favoritar()
