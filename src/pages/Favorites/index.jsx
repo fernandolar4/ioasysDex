@@ -8,6 +8,7 @@ import BackButton from "../../components/BackButton";
 const Favorites = () => {
   const pokemons = [];
 
+  // Eu sei que isso aqui não ta uma boa pratica mas ta funcionando por enquanto
   for (let i = 0; i < 2000; i++) {
     if (localStorage.getItem(i) !== null) {
       pokemons.push(JSON.parse(localStorage.getItem(i)));
@@ -22,8 +23,6 @@ const Favorites = () => {
     return ("00" + number).slice(-3);
   };
 
-  console.log("arr", pokemons);
-
   return (
     <S.PageContainer>
       <Header />
@@ -35,8 +34,12 @@ const Favorites = () => {
       </S.Links>
 
       <S2.CardContainer>
-        {pokemons.map((pokemon) => (
-          <S2.Card type={capitalizeFirstLetter(pokemon.types[0].type.name)}>
+        {pokemons.map((pokemon, i) => (
+          <S2.Card
+            type={capitalizeFirstLetter(pokemon.types[0].type.name)}
+            key={pokemon.id}
+            onClick={console.log(pokemons.length)}
+          >
             <p>#{formatNumber(pokemon.id)}</p>
             <img src={pokemon.sprites.front_shiny} alt={pokemon.name} />
             <div>
