@@ -29,7 +29,6 @@ const statsPercentage = (number) => {
 const Stats = () => {
   const location = useLocation();
   const pokemon = location.state;
-
   const [pokemonFavoritado, setPokemonFavoritado] = useState(
     localStorage.getItem(pokemon.id)
   );

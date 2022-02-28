@@ -10,7 +10,7 @@ const Favorites = () => {
   const listaPlaceholders = [];
 
   // Eu sei que isso aqui não ta uma boa pratica mas ta funcionando por enquanto
-  for (let i = 0; i < 2000; i++) {
+  for (let i = 0; i < 898; i++) {
     if (localStorage.getItem(i) !== null) {
       pokemons.push(JSON.parse(localStorage.getItem(i)));
     }
@@ -47,7 +47,7 @@ const Favorites = () => {
             key={pokemon.id}
           >
             <p>#{formatNumber(pokemon.id)}</p>
-            <img src={pokemon.sprites.front_shiny} alt={pokemon.name} />
+            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
             <div>
               <p>{capitalizeFirstLetter(pokemon.name)}</p>
             </div>
