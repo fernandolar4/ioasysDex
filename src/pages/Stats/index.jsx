@@ -68,7 +68,10 @@ const Stats = () => {
           </S.PokeName>
           <S.PokeTypeContainer>
             {pokemon.types.map((tp) => (
-              <S.PokeType typeColor={capitalizeFirstLetter(tp.type.name)}>
+              <S.PokeType
+                key={tp.type.name}
+                typeColor={capitalizeFirstLetter(tp.type.name)}
+              >
                 <p>{capitalizeFirstLetter(tp.type.name)}</p>
               </S.PokeType>
             ))}
@@ -90,23 +93,22 @@ const Stats = () => {
             </div>
             <div>
               {pokemon.abilities.map((ab) => (
-                <p>{capitalizeFirstLetter(ab.ability.name)}</p>
+                <p key={ab.ability.name}>
+                  {capitalizeFirstLetter(ab.ability.name)}
+                </p>
               ))}
 
               <h4>Ability</h4>
             </div>
           </S.PokeFitness>
           <S.PokeText>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              leo felis, vulputate vitae sapien eu, feugiat ultrices nibh. Sed
-              neque diam, mollis eu consequat eget, porta eget ante. Integer
-              diam sem, volutpat varius consectetur vitae, congue a elit. Nullam
-              mattis nibh quis quam aliquet pulvinar. Suspendisse potenti. Nam
-              posuere auctor nunc vitae consectetur. Etiam in nibh et nisl
-              accumsan rutrum. Cras venenatis eros metus, pellentesque congue
-              lorem auctor sed.{" "}
-            </p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo
+            felis, vulputate vitae sapien eu, feugiat ultrices nibh. Sed neque
+            diam, mollis eu consequat eget, porta eget ante. Integer diam sem,
+            volutpat varius consectetur vitae, congue a elit. Nullam mattis nibh
+            quis quam aliquet pulvinar. Suspendisse potenti. Nam posuere auctor
+            nunc vitae consectetur. Etiam in nibh et nisl accumsan rutrum. Cras
+            venenatis eros metus, pellentesque congue lorem auctor sed.
           </S.PokeText>
           <S.PokeTableName
             typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
