@@ -8,7 +8,6 @@ import BackButton from "../../components/BackButton";
 const Favorites = () => {
   const pokemons = [];
   const listaPlaceholders = [];
-  let i = 0;
 
   // Eu sei que isso aqui não ta uma boa pratica mas ta funcionando por enquanto
   for (let i = 0; i < 2000; i++) {
@@ -18,7 +17,7 @@ const Favorites = () => {
   }
   const listaFavoritos = pokemons.slice(0, 12);
 
-  for (i; i < 12 - listaFavoritos.length; i++) {
+  for (let i = 0; i < 12 - listaFavoritos.length; i++) {
     listaPlaceholders.push("placeholder");
   }
 
