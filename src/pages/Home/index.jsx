@@ -61,8 +61,7 @@ const Home = () => {
             className={"textarea"}
             value={inputPokemon}
             onChange={(event) => {
-              setInputPokemon(event.target.value);
-              console.log(inputPokemon);
+              setInputPokemon(event.target.value.toLowerCase());
             }}
           />
           <label htmlFor="search">Buscar</label>
