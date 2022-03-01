@@ -14,7 +14,7 @@ Projeto de desafio final do Ioasys Camp, que tem como proposta fazer uma pokedex
 
 ## Tecnologias utilizadas 
 
-![enter image description here](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![enter image description here](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![enter image description here](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![enter image description here](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 
 ## A aplicação: 
@@ -33,3 +33,12 @@ Projeto de desafio final do Ioasys Camp, que tem como proposta fazer uma pokedex
 
 
 ![Mobile](https://cdn.discordapp.com/attachments/933812402229772338/948282823473766500/6.png)
+
+
+## Contatos: 
+
+
+[LinkedIn](https://www.linkedin.com/in/fernando-lara-maia/) ![LinkeDin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
+
+[GitHub](https://github.com/fernandolar4) ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
