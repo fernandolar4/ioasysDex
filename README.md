@@ -23,16 +23,19 @@ Projeto de desafio final do Ioasys Camp, que tem como proposta fazer uma pokedex
 
 ![Dark Mode](https://cdn.discordapp.com/attachments/933812402229772338/948282822362300436/2.png)
 
-![Status](https://cdn.discordapp.com/attachments/933812402229772338/948282822630727701/3.png)
+![Status](https://cdn.discordapp.com/attachments/933812402229772338/948325424205807636/31.png)
 
-![Favoritado](https://cdn.discordapp.com/attachments/933812402229772338/948282822987239474/4.png)
+![Favoritado](https://cdn.discordapp.com/attachments/933812402229772338/948326834469208084/ioasysdex_2.png)
 
 ![Página de favoritos](https://cdn.discordapp.com/attachments/933812402229772338/948282823264043119/5.png)
+
+![Buscando pokémon](https://cdn.discordapp.com/attachments/933812402229772338/948326174986227813/ioasysdex.png)
+
 
 ## Mobile: 
 
 
-![Mobile](https://cdn.discordapp.com/attachments/933812402229772338/948282823473766500/6.png)
+![Mobile](https://cdn.discordapp.com/attachments/933812402229772338/948326175355330610/ioasysdex_1.png)
 
 
 ## Contatos: 
