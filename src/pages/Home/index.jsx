@@ -1,16 +1,12 @@
-import * as S from "./Home.style";
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import axios from "axios";
 
+import * as S from "./Home.style";
 import Header from "../../components/Header";
-
 import FavoriteButton from "../../components/FavoriteButton";
 import PokeCard from "../../components/PokeCard";
 import getAllPokemons from "../../services/getAllPokemons";
-
 import Lupa from "../../assets/icons/magnifier.svg";
 import X from "../../assets/icons/x.svg";
 

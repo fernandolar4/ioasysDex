@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
 
 import Header from "../../components/Header";
 import BackButton from "../../components/BackButton";
@@ -32,6 +33,23 @@ const Stats = () => {
   const [pokemonFavoritado, setPokemonFavoritado] = useState(
     localStorage.getItem(pokemon.id)
   );
+
+  const [flavorText, setFlavorText] = useState(
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  );
+
+  useEffect(() => {
+    pegaFlavorText();
+  }, []);
+
+  async function pegaFlavorText() {
+    const data = await axios({
+      url: `https://pokeapi.co/api/v2/pokemon-species/${pokemon.id}`,
+    });
+    const textoFlavor = data.data.flavor_text_entries[7].flavor_text;
+    const textoFlavorFormatado = textoFlavor.replace(/[^a-zA-Z0-9.]/gm, " ");
+    setFlavorText(textoFlavorFormatado);
+  }
 
   function favoritar() {
     localStorage.setItem(`${pokemon.id}`, JSON.stringify(pokemon));
@@ -115,15 +133,7 @@ const Stats = () => {
               <h4>Ability</h4>
             </div>
           </S.PokeFitness>
-          <S.PokeText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam leo
-            felis, vulputate vitae sapien eu, feugiat ultrices nibh. Sed neque
-            diam, mollis eu consequat eget, porta eget ante. Integer diam sem,
-            volutpat varius consectetur vitae, congue a elit. Nullam mattis nibh
-            quis quam aliquet pulvinar. Suspendisse potenti. Nam posuere auctor
-            nunc vitae consectetur. Etiam in nibh et nisl accumsan rutrum. Cras
-            venenatis eros metus, pellentesque congue lorem auctor sed.
-          </S.PokeText>
+          <S.PokeText>{flavorText}</S.PokeText>
           <S.PokeTableName
             typeColor={capitalizeFirstLetter(pokemon.types[0].type.name)}
           >
