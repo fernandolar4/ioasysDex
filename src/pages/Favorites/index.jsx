@@ -21,8 +21,6 @@ const Favorites = () => {
     listaPlaceholders.push("placeholder");
   }
 
-  console.log("listaPlaceholders", listaPlaceholders.length);
-
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -53,8 +51,8 @@ const Favorites = () => {
             </div>
           </S2.Card>
         ))}
-        {listaPlaceholders.map(() => (
-          <S.Placeholder />
+        {listaPlaceholders.map((ph, i) => (
+          <S.Placeholder key={(ph, i)} />
         ))}
       </S2.CardContainer>
 
