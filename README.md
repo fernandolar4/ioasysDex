@@ -19,18 +19,17 @@ Projeto de desafio final do Ioasys Camp, que tem como proposta fazer uma pokedex
 
 ## A aplicação: 
 
-![Home](https://media.discordapp.net/attachments/933812402229772338/948282822060277790/1.png?width=841&height=473)
+![Home](https://cdn.discordapp.com/attachments/933812402229772338/948282822060277790/1.png)
 
-![Dark Mode](https://media.discordapp.net/attachments/933812402229772338/948282822362300436/2.png?width=841&height=473)
+![Dark Mode](https://cdn.discordapp.com/attachments/933812402229772338/948282822362300436/2.png)
 
-![Status](https://media.discordapp.net/attachments/933812402229772338/948282822630727701/3.png?width=841&height=473)
+![Status](https://cdn.discordapp.com/attachments/933812402229772338/948282822630727701/3.png)
 
-![Favoritado](https://media.discordapp.net/attachments/933812402229772338/948282822987239474/4.png?width=841&height=473)
+![Favoritado](https://cdn.discordapp.com/attachments/933812402229772338/948282822987239474/4.png)
 
-
-![Página de favoritos](https://media.discordapp.net/attachments/933812402229772338/948282823264043119/5.png?width=841&height=473)
+![Página de favoritos](https://cdn.discordapp.com/attachments/933812402229772338/948282823264043119/5.png)
 
 ## Mobile: 
 
 
-![Mobile](https://media.discordapp.net/attachments/933812402229772338/948282823473766500/6.png?width=841&height=473)
+![Mobile](https://cdn.discordapp.com/attachments/933812402229772338/948282823473766500/6.png)
