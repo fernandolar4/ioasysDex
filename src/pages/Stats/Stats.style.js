@@ -76,6 +76,7 @@ export const PokeFoto = styled.div`
 
     @media (max-width: 900px) {
       max-width: 40vh;
+      max-height: 35vh;
 
       position: absolute;
       margin: auto;
@@ -84,7 +85,7 @@ export const PokeFoto = styled.div`
       text-align: center;
       z-index: 1;
 
-      top: 7vh;
+      top: 5vh;
     }
   }
 `;
