@@ -47,5 +47,8 @@ export const Formulario = styled.form`
         margin-right: 100px;
       }
     }
+    :focus-visible {
+      outline: none;
+    }
   }
 `;
