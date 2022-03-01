@@ -54,7 +54,10 @@ export const Placeholder = styled.div`
 
   background: ${({ theme }) => theme.colors.LightGray};
   border: 10px solid ${({ theme }) => theme.colors.LightGray};
-  min-height: 150px;
+  min-height: 155px;
   opacity: 0.75;
   border-radius: 10px;
+  @media (max-width: 900px) {
+    min-height: 125px;
+  }
 `;
