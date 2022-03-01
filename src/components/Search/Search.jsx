@@ -1,17 +1,22 @@
-import Lupa from "../../assets/icons/magnifier.svg";
-import * as S from "./Search.style";
+import { useState } from "react";
 
-const Search = () => (
-  <S.Formulario>
-    <input
-      type="text"
-      id="search"
-      placeholder="Buscar pokemon"
-      className={"textarea"}
-    />
-    <label htmlFor="search">Buscar</label>
-    <input type="image" src={Lupa} alt="Lupa" className={"lupa"}></input>
-  </S.Formulario>
-);
+import * as S from "./Search.style";
+import Lupa from "../../assets/icons/magnifier.svg";
+
+const Search = () => {
+
+  return (
+    <S.Formulario>
+      <input
+        type="text"
+        id="search"
+        placeholder="Buscar pokemon"
+        className={"textarea"}
+      />
+      <label htmlFor="search">Buscar</label>
+      <input type="image" src={Lupa} alt="Lupa" className={"lupa"}></input>
+    </S.Formulario>
+  );
+};
 
 export default Search;

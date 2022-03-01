@@ -13,6 +13,13 @@ const Home = () => {
   const [scrollEnds, setScrollEnds] = useState(false);
   const [nextPokemonsUrl, setNextPokemonsUrl] = useState("/pokemon");
 
+  const [pokemonBusca, setPokemonBusca] = useState("");
+
+  function eventoBusca(e) {
+    e.preventDefault();
+    console.log("a");
+  }
+
   window.onscroll = function (ev) {
     if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
       setScrollEnds(true);
@@ -36,7 +43,7 @@ const Home = () => {
     <S.HomeContainer>
       <Header />
       <S.Box>
-        <Search />
+        <Search onSubmit={() => eventoBusca()} />
         <FavoriteButton className={"nameless"} />
       </S.Box>
       <PokeCard pokemons={pokemons} />
